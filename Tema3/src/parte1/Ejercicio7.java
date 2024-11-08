@@ -7,7 +7,7 @@ public class Ejercicio7 {
 	public static void main(String[] args) {
 		// Creamos el array entero meses que servira para mantener la informacion de la
 		// temperatura de los distintos meses
-		int meses[] = new int[12];
+		int meses[] = new int[13];
 		// Creamos la variable entera temperatura que servira para almacenar la media de
 		// la temperatura
 		int temperatura;
@@ -22,8 +22,8 @@ public class Ejercicio7 {
 		año = lectura.nextInt();
 		// Creamos un bucle for que se inicializa en 0, itera 12 veces e incrementa en 1
 		// vez cada uno
-		for (int i = 0; i < 12; i++) {
-			System.out.println("Introduce la temperatura del mes");
+		for (int i = 1; i < 13; i++) {
+			System.out.println("Introduce la temperatura del mes " + i);
 			temperatura = lectura.nextInt();
 			meses[i] = temperatura;
 
