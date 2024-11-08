@@ -11,7 +11,7 @@ public class Ejercicio7 {
 		// Creamos la variable entera temperatura que servira para almacenar la media de
 		// la temperatura
 		int temperatura;
-        //Creamos la variable año para mostrarle al usuario una tabla mas completa
+		// Creamos la variable año para mostrarle al usuario una tabla mas completa
 		int año;
 		// Creamos el objeto Scanner
 		Scanner lectura = new Scanner(System.in);
@@ -26,11 +26,17 @@ public class Ejercicio7 {
 			System.out.println("Introduce la temperatura del mes");
 			temperatura = lectura.nextInt();
 			meses[i] = temperatura;
+
 		}
+		System.out.println("El año elegido ha sido " + año);
 		// Creamos un bucle for-each
 		for (int valor : meses) {
 
+			for (int i = 0; i < valor; i++) {
+				System.out.print("*");
+			}
 			System.out.println();
+
 		}
 //Cierre Scanner
 		lectura.close();
