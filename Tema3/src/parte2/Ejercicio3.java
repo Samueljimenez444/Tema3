@@ -17,10 +17,8 @@ public class Ejercicio3 {
 		Scanner lectura = new Scanner(System.in);
 		//Creamos un bucle for donde i=0 iterara mientras i<30 e i incrementara su valor en 1 por cada iteracion del bucle
 		for (int i = 0; i < 30; i++) {
-			// Print que le indica al usuario que hacer
-			System.out.println("Introduce un numero");
-			// Definimos el valor de numeros en funcion del input del usuario
-			numeros = lectura.nextInt();
+			// Definimos el valor de numeros en funcion de un valor aleatorio
+			numeros =rand.nextInt(1,10);
 			lista[i]=numeros;
 		}
 		//Ordenamos los valores del array
@@ -28,6 +26,8 @@ public class Ejercicio3 {
 		//Prints que le indican al usuario que el array esta ordenado
 		System.out.println("Aqui esta el array ordenado");
 		System.out.println(Arrays.toString(lista));
+		//Cierre Scanner
+		lectura.close();
 	}
 
 }
