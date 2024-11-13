@@ -13,7 +13,7 @@ public class Ejercicio2 {
 		int valores;
 		// Creamos el objeto Scanner
 		Scanner lectura = new Scanner(System.in);
-
+		int suma=1;	
 		int notaMax = 0;
 		int notaMin = 0;
 		int media = 0;
@@ -40,8 +40,22 @@ public class Ejercicio2 {
 			System.out.println();
 		}
 		for(int i=0;i< notas.length;i++) {
+			notaMax=notas[i][0];
+			notaMin=notas[i][0];
+			media=0;
 			for(int j=0;j< notas[0].length;j++){
+				if(notas[i][j]>notaMax) {
+					notaMax=notas[i][j];
+				}
+				else if(notas[i][j]<notaMin){
+					notaMin=notas[i][j];
+				}
+				media+=notas[i][j]/5;
 			}
+			System.out.println("Alumno " + (i+suma) +" ");
+			System.out.println("La nota Max del alumno es " + notaMax);
+			System.out.println("La nota Min del alumno es " + notaMin);
+			System.out.println("La media del alumno es " +media);
 		}
 		
 		// Cierre Scanner
