@@ -29,26 +29,18 @@ public class Ejercicio5 {
 		}
 		// Creamos un bucle for anidado que servira para recorrer el aray e imprimirlo
 		for (int i = 0; i < tabla.length; i++) {
+			suma = 0;
 			System.out.print("Fila " + (i + 1) + "\t");
 			for (int j = 0; j < tabla[i].length; j++) {
 				// Se imprimira la posicion i,j del array con un espacio
 				System.out.print(tabla[i][j] + "\t");
-			}
+				suma += tabla[i][j];	
+				total += suma;
+				}
 			// Salto de linea
-			System.out.println();
-		}
-		// Creamos un bucle for anidado que servira para recorrer la tabla y realizar un
-		// sumatorio de sus filas
-		for (int i = 0; i < tabla.length; i++) {
-			// Reiniciamos el valor de suma por cada iteracion del bucle exterior
-			suma = 0;
-			for (int j = 0; j < tabla[0].length; j++) {
-				// Suma es igual a la suma consecutiva de las posiciones i,j de la tabla
-				suma += tabla[i][j];
-			}
-			/* Print de las sumas totales y de la fila que estamos sumando */
-			System.out.println("La suma total de la fila " + (i + 1) + " es igual a: ");
-			System.out.println(suma + " ");
+			System.out.println( suma + "Σ");	
+			
+			
 		}
 		/*
 		 * Repetimos el anterior bucle pero esta vez lo recorreremos de forma externa a
@@ -63,10 +55,9 @@ public class Ejercicio5 {
 				total += suma;
 			}
 			/* Print finales del total y la suma de columnas */
-			System.out.println("La suma total de la columna " + (j + 1) + " es igual a:");
-			System.out.println(suma + " ");
-
+			System.out.print("  "  +suma + "Σ"+ "\t");
 		}
+		System.out.println();
 		System.out.println("El total de suma de todas las columnas es: " + total);
 	}
 }
