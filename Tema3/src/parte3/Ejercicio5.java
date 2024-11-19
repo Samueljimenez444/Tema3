@@ -30,7 +30,7 @@ public class Ejercicio5 {
 		// Creamos un bucle for anidado que servira para recorrer el aray e imprimirlo
 		for (int i = 0; i < tabla.length; i++) {
 			suma = 0;
-			System.out.print("Fila " + (i + 1) + "\t");
+			
 			for (int j = 0; j < tabla[i].length; j++) {
 				// Se imprimira la posicion i,j del array con un espacio
 				System.out.print(tabla[i][j] + "\t");
@@ -55,9 +55,11 @@ public class Ejercicio5 {
 				total += suma;
 			}
 			/* Print finales del total y la suma de columnas */
-			System.out.print("  "  +suma + "Σ"+ "\t");
+			System.out.print(suma + "Σ"+ "\t");
+			
 		}
+		System.out.print(total +"Σ");
 		System.out.println();
-		System.out.println("El total de suma de todas las columnas es: " + total);
+		
 	}
 }
