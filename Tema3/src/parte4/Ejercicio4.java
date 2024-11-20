@@ -1,24 +1,31 @@
 package parte4;
 
-import java.util.Random;
+
 
 public class Ejercicio4 {
-	public static int buscar(int clave, int t[]) {
-		for (int i = 0; i < t.length; i++) {
-			if (clave == t[i]) {
-				System.out.println(i);
-			} else {
-				System.out.println(-1);
-			}
+	public static int buscar(int t[], int clave) {
+		//Creamos la variable entera contador que servira para contabilizar las posiciones del array y que hay en esas posiciones
+		int contador=0;
+		//Creamos un bucle while que seguira iterando mientras el contador sea menor a la longitud del array y la clave sea distinta a la posicion del array en funcion del contador
+		while(contador<t.length && clave!=t[contador] ){
+			//Aumentamos el valor de contador en 1
+			contador++;
+			
 		}
-		return 0;
+		//Si el contador tiene el mismo valor que la longitud del array
+		if(contador==t.length){
+			//Contador es igual a -1
+			contador=-1;
+		}
+		//Devolvemos el contador
+		return contador;
 	}
 
 	public static void main(String[] args) {
-		int tabla[]=buscar(5);
-		int secreto= buscar(1);
-		System.out.println(tabla);
-		System.out.println(secreto);
+		//Creamos la variable entera tabla 
+		int tabla[]= {1,2,1,1,3};
+		//Print tras usar la tabla en nuestra funcion buscar
+		System.out.println(buscar(tabla,3));
 	}
 
 }
