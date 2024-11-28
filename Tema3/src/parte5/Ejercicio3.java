@@ -1,5 +1,6 @@
 package parte5;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -52,6 +53,7 @@ public static int[][] ordenar(int[][] lista) {
 				tabla[i][j] = numero;
 			}
 		}
+		System.out.println("Esta es la tabla sin desordenar");
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[0].length; j++) {
 				// Print del array en forma de matriz
@@ -62,7 +64,8 @@ public static int[][] ordenar(int[][] lista) {
 			System.out.println();
 		}
 		ordenar(tabla);
-		
+		System.out.println("Esta es la tabla desordenada");
+		System.out.println(Arrays.deepToString(tabla));
 		lectura.close();
 	}
 
