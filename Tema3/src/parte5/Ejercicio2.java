@@ -21,6 +21,7 @@ public class Ejercicio2 {
 			lista[i]=lista[pos];
 			lista[pos]=auxiliar;
 		}
+	
 		return 0;
 	}
 	public static void main(String[] args) {

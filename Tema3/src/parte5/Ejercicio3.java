@@ -5,17 +5,29 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Ejercicio3 {
-public static int[][] ordenar(int[][] lista) {
+	//Creamos una funcion tipo matriz [][] con variable entera tipo matriz lista en la que desordenaremos una matriz
+public static int[][] desordenar(int[][] lista) {
+	//Creamos el objeto Random
 	Random rand=new Random();
+	//Creamos la variable entera posicionf que servira para almacenar la posicion de filas
 	int posicionf;
+	//Creamos la variable entera posicionc que servira para almacenar la posicion de columnas
 	int posicionc;
+	//Creamos la variable entera auxiliar que nos servira para no repetir numeros a la hora de desordenar el array
 	int auxiliar;
+	//Creamos un bucle for anidado que recorrera el array
 	for (int i = 0; i < lista.length; i++) {
 		for (int j = 0; j < lista[0].length; j++) {
+			//Definimos la posicion c como un numero aleatorio entre 0 y la longitu del array en cuanto a columnnas
 	posicionc=rand.nextInt(0,lista[0].length);
+	//Definimos la posicion f como un numero aleatorio entre 0 y la longitu del array en cuanto a filas
+
 	posicionf=rand.nextInt(0,lista.length);
+	//Auxiliar tomara el valor de la lista en la posicion [i][j]
 			auxiliar=lista[i][j];
+			//La lista en i,j  sera igual a la lista en la posicion aleatoria
 			lista[i][j]=lista[posicionf][posicionc];
+			//
 			lista[posicionf][posicionc]=auxiliar;
 		}
 	}
@@ -63,7 +75,7 @@ public static int[][] ordenar(int[][] lista) {
 			// Salto de linea
 			System.out.println();
 		}
-		ordenar(tabla);
+		desordenar(tabla);
 		System.out.println("Esta es la tabla desordenada");
 		System.out.println(Arrays.deepToString(tabla));
 		lectura.close();
